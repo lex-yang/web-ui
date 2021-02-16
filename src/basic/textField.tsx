@@ -5,9 +5,8 @@ import {
   Text,
   TextStyle,
   TextInput,
-  TextInputStyle,
   StyleSheet,
-} from 'react-native-web';
+} from 'react-native';
 
 export interface TextFieldProp {
   label: string,
@@ -21,7 +20,7 @@ export interface TextFieldProp {
 interface TextFieldStyle {
   wrap: ViewStyle,
   label: TextStyle,
-  input: TextInputStyle,
+  input: TextStyle,
 }
 
 export const TextField: React.FC<TextFieldProp> = ({

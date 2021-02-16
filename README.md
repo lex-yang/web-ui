@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save web-ui
+npm install --save @yanglex/web-ui
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ npm install --save web-ui
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'web-ui'
-import 'web-ui/dist/index.css'
+import MyComponent from '@yanglex/web-ui'
+import '@yanglex/web-ui/dist/index.css'
 
 class Example extends Component {
   render() {

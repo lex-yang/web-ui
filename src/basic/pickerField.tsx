@@ -5,9 +5,8 @@ import {
   Text,
   TextStyle,
   Picker,
-  PickerStyle,
   StyleSheet,
-} from 'react-native-web';
+} from 'react-native';
 
 export interface PickerItem {
   key: string,
@@ -24,7 +23,7 @@ export interface PickerFieldProp {
 interface PickerFieldStyle {
   wrap: ViewStyle,
   label: TextStyle,
-  picker: PickerStyle,
+  picker: ViewStyle,
 }
 
 export const PickerField: React.FC<PickerFieldProp> = ({

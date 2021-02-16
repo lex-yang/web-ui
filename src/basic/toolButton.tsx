@@ -3,7 +3,7 @@ import {
   Pressable,
   Text,
   Image,
-} from 'react-native-web';
+} from 'react-native';
 
 export interface ToolButtonProp {
   imageURI: string,

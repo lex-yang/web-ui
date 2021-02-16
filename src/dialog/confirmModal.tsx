@@ -1,17 +1,15 @@
 import React from 'react';
 import {
   View,
+  ViewStyle,
   Pressable,
   Text,
+  TextStyle,
   ScrollView,
   StyleSheet,
-} from 'react-native-web';
+} from 'react-native';
 
-import Modal from 'modal-enhanced-react-native-web';
-
-import {
-  TextField
-} from '../basic';
+import { Modal } from 'react-native';
 
 export interface ConfirmModalProp {
   visible: boolean;
@@ -19,6 +17,16 @@ export interface ConfirmModalProp {
 
   onClose: () => void;
   onConfirm: () => void;
+}
+
+interface ConfirmModalStyle {
+  title: TextStyle;
+  textStyle: TextStyle;
+  modalView: ViewStyle;
+  centeredView: ViewStyle;
+  field: ViewStyle;
+  modalButtons: ViewStyle;
+  openButton: ViewStyle;
 }
 
 export const ConfirmModal: React.FC<ConfirmModalProp> = ({ visible, message, onClose, onConfirm }) => {
@@ -57,7 +65,7 @@ export const ConfirmModal: React.FC<ConfirmModalProp> = ({ visible, message, onC
   </Modal>)
 }
 
-export const withModal = (ChildComponent) => {
+export const withModal = (ChildComponent: any) => {
   return ({ visible, message, onClose, onConfirm, ...props } : ConfirmModalProp) => {
     return (
       <Modal
@@ -95,7 +103,7 @@ export const withModal = (ChildComponent) => {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create<ConfirmModalStyle>({
   field: {
     padding:10,
   },
@@ -129,7 +137,7 @@ const styles = StyleSheet.create({
   modalButtons: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "space-between",
+    alignItems: "center"
   },
   openButton: {
     flex: 1,
@@ -141,10 +149,6 @@ const styles = StyleSheet.create({
   textStyle: {
     color: "white",
     fontWeight: "bold",
-    textAlign: "center"
-  },
-  modalText: {
-    marginBottom: 15,
     textAlign: "center"
   },
 });
