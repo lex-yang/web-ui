@@ -66,7 +66,7 @@ export const ConfirmModal: React.FC<ConfirmModalProp> = ({ visible, message, onC
 }
 
 export const withModal = (ChildComponent: any) => {
-  return ({ visible, message, onClose, onConfirm, ...props } : ConfirmModalProp) => {
+  return ({ visible, onClose, onConfirm, ...props } : ConfirmModalProp) => {
     return (
       <Modal
       animationType="slide"
