@@ -4,3 +4,4 @@ export * from './basic/toolButton';
 
 export * from './dialog/confirmModal';
 export * from './table/simpleTable';
+export * from './table/pagingTable';
