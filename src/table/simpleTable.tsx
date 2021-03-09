@@ -14,7 +14,7 @@ export type TableField = {
   name: string;
 };
 
-type TableItemBase = {
+export type TableItemBase = {
   id: string;
 };
 
@@ -130,19 +130,4 @@ const styles = StyleSheet.create({
     margin: 5,
     flex: 1,
   },
-  paginator: {
-    flexDirection: "row",
-    padding: 5,
-  },
-  currentPage: {
-    backgroundColor: "#77f",
-    color: "#fff",
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-  pageIndex: {
-    paddingLeft: 10,
-    paddingRight: 10,
-  }
-
 });
